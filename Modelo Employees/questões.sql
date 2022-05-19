@@ -52,10 +52,43 @@ select employee_id, first_name, last_name
 from employees
 where first_name like 'S%' or last_name like 'S%' 
 
-
 -- i) Exibir empregados que foram admitidos no mês de maio
 select employee_id, first_name,hire_date
 from employees
 where to_char(hire_date,'mm') = '05'
 
 select to_char(hire_date) Contratacao from employees
+
+-- j) Exibir detalhes dos empregados onde a porcentagem de comissão é nula, o salário está no intervalo de 5000 a 10000 e o departamento é 30.
+select first_name, employee_id, commission_pct, salary
+from employees join departments using (department_id)
+where commission_pct is null and department_id = 30 and salary >= 5000 and salary <= 10000
+
+-- k) Exibir nome e o tempo de experiência dos funcionários em anos.
+select first_name,last_name, TRUNC((MONTHS_BETWEEN (TO_DATE (end_date, 'dd/mm/yy'), TO_DATE (start_date, 'dd/mm/yy'))/12),1) "Anos"
+from job_history join employees using (employee_id)
+
+-- l) Mostrar o primeiro nome dos funcionários que foram admitidos em 2001.
+select first_name, to_char(hire_date,'yyyy') Contratacao
+from employees
+where hire_date like '%01%'
+
+-- m) Exibir o comprimento do primeiro nome para os funcionários onde o sobrenome contém o caractere 'b' após a terceira posição.
+select first_name,last_name as Teste, length(first_name)
+from employees
+where last_name like '___b%'  
+
+-- n) Exibir o primeiro nome em maiúsculas e o endereço de e-mail em minúsculas para os funcionários, onde o primeiro nome é igual ao e-mail.
+select upper(first_name), lower(email)
+from employees
+where first_name = email
+
+-- o) Exibir funcionários que admitidos no ano atual.
+select first_name, hire_date
+from employees
+where hire_date = sysdate
+
+-- p) Selecione todos os ids, nomes e sobrenomes de empregados, que estejam nas faixas de salários de 0 a 2000 e maiores ou iguais a 5000. 
+select employee_id, first_name, last_name
+from employees
+where salary <= 2000 or salary >= 5000
