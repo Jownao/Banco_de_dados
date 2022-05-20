@@ -92,3 +92,35 @@ where hire_date = sysdate
 select employee_id, first_name, last_name
 from employees
 where salary <= 2000 or salary >= 5000
+
+-- Group By
+
+-- a) Exibir quantos funcionários foram admitidos em cada mês do ano atual.
+select count(e.employee_id), e.hire_date
+from employees e join job_history j using(job_id)
+where hire_date like '%22%'
+group by e.hire_date
+
+-- b) Exibir ID do gerente e número de funcionários gerenciados por ele.
+select d.manager_id as Gerente, count(e.employee_id) Funcionarios
+from employees e join departments d using(department_id)
+group by d.manager_id
+
+-- c) Exibir ID do funcionário e a data em que ele terminou seu trabalho anterior.
+select employee_id , end_date
+from employees e join job_history j using(employee_id)
+
+-- d) Mostre o ID do país e o número de cidades que temos no país.
+select c.COUNTRY_ID as Pais, count(l.location_id) as TotalCidades
+from countries c join locations l on c.country_id = l.country_id -- using (country_id)
+group by c.COUNTRY_ID
+
+-- e) Mostrar o salário médio dos funcionários em cada departamento com porcentagem de comissão.
+select TRUNC(AVG(salary),2) as MediaSalario, department_name, commission_pct
+from employees e join departments d using (department_id)
+group by department_name, commission_pct
+
+-- f) Exibir ID do trabalho, número de funcionários, soma do salário e diferença entre o salário mais alto e o salário mais baixo dos funcionários para cada trabalho.
+select j.job_id, count(e.employee_id)as qtd_func, sum(e.salary) as Soma_salario, (max(e.salary)-min(e.salary)) as Diferenca_salario
+from employees e join job_history j on j.job_id = e.job_id
+group by j.job_id
