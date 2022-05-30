@@ -124,3 +124,63 @@ group by department_name, commission_pct
 select j.job_id, count(e.employee_id)as qtd_func, sum(e.salary) as Soma_salario, (max(e.salary)-min(e.salary)) as Diferenca_salario
 from employees e join job_history j on j.job_id = e.job_id
 group by j.job_id
+
+-- Having
+
+-- a) Exibir ID do trabalho para trabalhos com salário médio superior a 10000.
+select job_id
+from jobs join employees using(job_id)
+group by job_id
+having avg(salary) >10000
+
+-- b) Mostrar anos em que mais de 10 funcionários foram admitidos. (IMCOMPLETA)
+select count(hire_date),hire_date
+from employees
+where to_char(hire_date) like '%yy%'
+group by hire_date
+--having count(hire_date) > 10
+order by 1 desc
+
+-- c) Mostrar departamentos em que funcionários têm porcentagem de comissão mais de cinco por cento.
+select department_name , commission_pct
+from departments join employees using (department_id)
+group by department_name, commission_pct
+having commission_pct >.05
+
+-- d) Exibir o ID do trabalho dos trabalhos realizados por mais de 3 funcionários por mais de 100 dias. (IMCOMPLETO)
+select j.job_id,count(e.employee_id)
+from employees e join jobs j on j.job_id = e.job_id
+                 --join job_history h on h.employee_id = e.employee_id
+group by j.job_id 
+having count(e.employee_id) > 3 
+
+select j.job_id,count(e.employee_id)
+from jobs j join employees e on j.job_id = e.job_id
+                 join job_history h on h.job_id = j.job_id
+group by j.job_id ,start_date,end_date
+having count(e.employee_id) > 3 and (start_date-end_date)>100
+
+-- e) Exibir departamentos onde um gerente gerencia mais de 5 funcionários.
+
+-- Subselects
+
+-- a) Exibir detalhes dos departamentos nos quais o salário máximo é superior a 10000.
+select  department_name, department_id 
+from departments join employees using (department_id)
+where (department_id,salary) in (select department_id, max(salary)
+                                    from departments join employees using (department_id)
+                                    where salary > 10000
+                                    group by department_id ) 
+order by 2 asc
+
+select salary from employees where salary>10000
+
+-- b) Exibir detalhes de departamentos gerenciados por 'Smith'.
+-- c) Exibir trabalhos nos quais os funcionários foram admitidos no ano atual.
+-- d) Exibir funcionários que não fizeram nenhum trabalho no passado.
+-- e) Exibir nome do país, cidade e número de departamentos onde o departamento possui mais de 5 funcionários.
+-- f) Exibir detalhes do gerente que administra mais de 5 funcionários.
+-- g) Exibir os departamentos em que nenhum funcionário foi admitido nos últimos dois anos.
+-- h) Exibir os detalhes dos departamentos nos quais o salário máximo é superior a 10000 para os funcionários que fizeram um trabalho no passado.
+-- i) Mostre os detalhes dos funcionários que possuem os salários mais elevados nos departamentos.
+-- j) Exibir a cidade do empregado cuja id do empregado é 105.
