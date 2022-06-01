@@ -1,7 +1,32 @@
-# Banco_de_dados
-## Conteúdo voltado para banco de dados, com algumas atividades resolvidas e alguns tutoriais quem sabe de utilização de cada linguagem SQL.
+# Banco de Dados <img src="https://github.com/brunocampos01/banco-de-dados/blob/master/images/image_bd.png" width="10%" height="10%" align="right" valign="center"/> 
+Conteúdo voltado para banco de dados, com algumas atividades resolvidas e algumas explicações e exemplos de funções, etc.
+
+![license](https://img.shields.io/badge/Code%20License-MIT-green.svg)
+![learning](https://img.shields.io/badge/SQL-learning-green.svg)
+![unit](https://img.shields.io/badge/UNIT-Banco%20de%20Dados-green)
+![Hits](https://hits.seeyoufarm.com)
+
+
+Conteúdo presente:
+* Álgebra Relacional
+  * Seleção
+  * Projeção
+  * Produto Cartesiano
+  * União
+  * Diferença
+  * Inteseção
+  * Junção Natural
+  * Designição
+  * Agregação
+ 
+* [SQL - oracle](https://github.com/Jownao/Banco_de_dados/tree/main/atividades_aula)
+  * Select
+  * Produto Cartesiano
+  * Joins
+  * Subselects 
+
 ---------------------------
-# Funções de Agregação
+# Funções de Agregação - SQL
 |Função| Exemplo| Descrição|
 |--------|---------|-------|
 |Avg|`Avg(Sales)`|Calcula a média de um conjunto numérico de valores.
