@@ -1,0 +1,67 @@
+
+CREATE TABLE fornecedor.dm_tempo (
+                sk_tempo INT NOT NULL,
+                data_completa DATE NOT NULL,
+                ano INT NOT NULL,
+                mes INT NOT NULL,
+                dia INT NOT NULL,
+                PRIMARY KEY (sk_tempo)
+);
+
+
+CREATE TABLE fornecedor.dm_fornecedor (
+                sk_fornecedor INT NOT NULL,
+                nk_fornecedor INT NOT NULL,
+                cidade_fornecedor VARCHAR(50) NOT NULL,
+                uf_fornecedor CHAR(2) NOT NULL,
+                nome_fornecedor VARCHAR(50) NOT NULL,
+                PRIMARY KEY (sk_fornecedor)
+);
+
+
+CREATE TABLE fornecedor.dm_mercadoria (
+                sk_mercadoria INT NOT NULL,
+                nk_mercadoria INT NOT NULL,
+                nome_mercadoria VARCHAR(50) NOT NULL,
+                PRIMARY KEY (sk_mercadoria)
+);
+
+
+CREATE TABLE fornecedor.dm_filial (
+                sk_filial INT NOT NULL,
+                nk_filial INT NOT NULL,
+                nome_filial VARCHAR(50) NOT NULL,
+                PRIMARY KEY (sk_filial)
+);
+
+
+CREATE TABLE fornecedor.ft_fornecimento (
+                sk_filial INT NOT NULL,
+                sk_fornecedor INT NOT NULL,
+                qtd INT NOT NULL,
+                sk_tempo INT NOT NULL,
+                sk_mercadoria INT NOT NULL
+);
+
+
+ALTER TABLE fornecedor.ft_fornecimento ADD CONSTRAINT dm_tempo_ft_fornecimento_fk
+FOREIGN KEY (sk_tempo)
+REFERENCES dm_tempo (sk_tempo)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE fornecedor.ft_fornecimento ADD CONSTRAINT dm_fornecedor_ft_fornecimento_fk
+FOREIGN KEY (sk_fornecedor)
+REFERENCES dm_fornecedor (sk_fornecedor)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE fornecedor.ft_fornecimento ADD CONSTRAINT dm_mercadoria_ft_fornecimento_fk
+FOREIGN KEY (sk_mercadoria)
+REFERENCES dm_mercadoria (sk_mercadoria)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE fornecedor.ft_fornecimento ADD CONSTRAINT dm_filial_ft_fornecimento_fk
+FOREIGN KEY (sk_filial)
+REFERENCES dm_filial (sk_filial)

@@ -1,0 +1,137 @@
+CREATE TABLE alunos (
+    mat_alu     NUMERIC(10) NOT NULL,
+    nome        VARCHAR(100) NOT NULL,
+    dat_entrada DATE NOT NULL,
+    cod_curso   NUMERIC(3) NOT NULL,
+    cotista     VARCHAR(1) NOT NULL
+);
+
+ALTER TABLE alunos ADD CONSTRAINT alunos_pk PRIMARY KEY ( mat_alu );
+
+CREATE TABLE cursos (
+    cod_curso NUMERIC(4) NOT NULL,
+    nom_curso VARCHAR(80) NOT NULL,
+    cod_dpto  NUMERIC(3) NOT NULL
+);
+
+ALTER TABLE cursos ADD CONSTRAINT cursos_pk PRIMARY KEY ( cod_curso );
+
+CREATE TABLE departamentos (
+    cod_dpto  NUMERIC(3) NOT NULL,
+    nome_dpto VARCHAR(50) NOT NULL
+);
+
+ALTER TABLE departamentos ADD CONSTRAINT departamentos_pk PRIMARY KEY ( cod_dpto );
+
+CREATE TABLE disciplinas (
+    cod_disc      NUMERIC(5) NOT NULL,
+    nome_disc     VARCHAR(60) NOT NULL,
+    carga_horaria NUMERIC(5, 2) NOT NULL
+);
+
+ALTER TABLE disciplinas ADD CONSTRAINT disciplinas_pk PRIMARY KEY ( cod_disc );
+
+CREATE TABLE matriculas (
+    semestre NUMERIC(6) NOT NULL,
+    mat_alu  NUMERIC(10) NOT NULL,
+    cod_disc NUMERIC(5) NOT NULL,
+    nota     NUMERIC(5, 2) NOT NULL,
+    faltas   NUMERIC(3) NOT NULL,
+    status   VARCHAR(1) NOT NULL
+);
+
+ALTER TABLE matriculas ADD CONSTRAINT matriculas_pk PRIMARY KEY ( semestre,
+                                                                  mat_alu );
+
+CREATE TABLE matrizes_cursos (
+    cod_curso NUMERIC(4) NOT NULL,
+    cod_disc  NUMERIC(5) NOT NULL,
+    periodo   NUMERIC(2) NOT NULL
+);
+
+ALTER TABLE matrizes_cursos ADD CONSTRAINT matrizes_cursos_pk PRIMARY KEY ( cod_curso,
+                                                                            cod_disc );
+
+ALTER TABLE alunos
+    ADD CONSTRAINT alunos_cursos_fk FOREIGN KEY ( cod_curso )
+        REFERENCES cursos ( cod_curso );
+
+ALTER TABLE cursos
+    ADD CONSTRAINT cursos_departamentos_fk FOREIGN KEY ( cod_dpto )
+        REFERENCES departamentos ( cod_dpto );
+
+ALTER TABLE matriculas
+    ADD CONSTRAINT matriculas_alunos_fk FOREIGN KEY ( mat_alu )
+        REFERENCES alunos ( mat_alu );
+
+ALTER TABLE matriculas
+    ADD CONSTRAINT matriculas_disciplinas_fk FOREIGN KEY ( cod_disc )
+        REFERENCES disciplinas ( cod_disc );
+
+ALTER TABLE matrizes_cursos
+    ADD CONSTRAINT matrizes_cursos_cursos_fk FOREIGN KEY ( cod_curso )
+        REFERENCES cursos ( cod_curso );
+
+ALTER TABLE matrizes_cursos
+    ADD CONSTRAINT matrizes_cursos_disciplinas_fk FOREIGN KEY ( cod_disc )
+        REFERENCES disciplinas ( cod_disc );
+
+
+DROP table departamentos CASCADE;
+drop table disciplinas CASCADE;
+drop table matriculas CASCADE;
+drop table matrizes_cursos CASCADE;
+drop table alunos CASCADE;
+drop table cursos CASCADE;
+
+
+drop table "SYSTEM"."CURSOS" cascade constraints PURGE;
+drop table "SYSTEM"."MATRIZES_CURSOS" cascade constraints PURGE;
+drop table "SYSTEM"."MATRICULAS" cascade constraints PURGE;
+drop table "SYSTEM"."DISCIPLINAS" cascade constraints PURGE;
+drop table "SYSTEM"."DEPARTAMENTOS" cascade constraints PURGE;
+
+
+
+ALTER TABLE alunos ADD CONSTRAINT alunos_pk PRIMARY KEY ( mat_alu );
+
+
+ALTER TABLE cursos ADD CONSTRAINT cursos_pk PRIMARY KEY ( cod_curso );
+
+ALTER TABLE departamentos ADD CONSTRAINT departamentos_pk PRIMARY KEY ( cod_dpto );
+
+
+
+ALTER TABLE disciplinas ADD CONSTRAINT disciplinas_pk PRIMARY KEY ( cod_disc );
+
+
+ALTER TABLE matriculas ADD CONSTRAINT matriculas_pk PRIMARY KEY ( semestre,
+                                                                  mat_alu );
+
+
+
+ALTER TABLE matrizes_cursos ADD CONSTRAINT matrizes_cursos_pk PRIMARY KEY ( cod_curso,
+                                                                            cod_disc );
+ALTER TABLE alunos
+    ADD CONSTRAINT alunos_cursos_fk FOREIGN KEY ( cod_curso )
+        REFERENCES cursos ( cod_curso );
+
+ALTER TABLE cursos
+    ADD CONSTRAINT cursos_departamentos_fk FOREIGN KEY ( cod_dpto )
+        REFERENCES departamentos ( cod_dpto );
+
+ALTER TABLE matriculas
+    ADD CONSTRAINT matriculas_alunos_fk FOREIGN KEY ( mat_alu )
+        REFERENCES alunos ( mat_alu );
+
+ALTER TABLE matriculas
+    ADD CONSTRAINT matriculas_disciplinas_fk FOREIGN KEY ( cod_disc )
+        REFERENCES disciplinas ( cod_disc );
+
+ALTER TABLE matrizes_cursos
+    ADD CONSTRAINT matrizes_cursos_cursos_fk FOREIGN KEY ( cod_curso )
+        REFERENCES cursos ( cod_curso );
+
+ALTER TABLE matrizes_cursos
+    ADD CONSTRAINT matrizes_cursos_disciplinas_fk FOREIGN KEY ( cod_disc )
+        REFERENCES disciplinas ( cod_disc );
