@@ -1,0 +1,132 @@
+-- Gerado por Oracle SQL Developer Data Modeler 21.4.2.059.0838
+--   em:        2022-10-01 23:33:31 BRT
+--   site:      Oracle Database 21c
+--   tipo:      Oracle Database 21c
+
+
+
+-- predefined type, no DDL - MDSYS.SDO_GEOMETRY
+
+-- predefined type, no DDL - XMLTYPE
+
+CREATE TABLE dm_alunos (
+    mat_alu     NUMBER(10) NOT NULL,
+    nome        VARCHAR2(100) NOT NULL,
+    dat_entrada DATE NOT NULL,
+    cod_curso   NUMBER(3) NOT NULL,
+    cotista     VARCHAR2(1) NOT NULL
+);
+
+ALTER TABLE dm_alunos ADD CONSTRAINT alunos_pk2 PRIMARY KEY ( mat_alu );
+
+CREATE TABLE dm_cursos (
+    cod_curso NUMBER(4) NOT NULL,
+    nom_curso VARCHAR2(80) NOT NULL,
+    cod_dpto  NUMBER(3) NOT NULL
+);
+
+ALTER TABLE dm_cursos ADD CONSTRAINT cursos_pk2 PRIMARY KEY ( cod_curso );
+
+CREATE TABLE dm_departamentos (
+    cod_dpto  NUMBER(3) NOT NULL,
+    nome_dpto VARCHAR2(50) NOT NULL
+);
+
+ALTER TABLE dm_departamentos ADD CONSTRAINT departamentos_pk2 PRIMARY KEY ( cod_dpto );
+
+CREATE TABLE dm_disciplinas (
+    cod_disc      NUMBER(5) NOT NULL,
+    nome_disc     VARCHAR2(60) NOT NULL,
+    carga_horaria NUMBER(5, 2) NOT NULL
+);
+
+ALTER TABLE dm_disciplinas ADD CONSTRAINT disciplinas_pk2 PRIMARY KEY ( cod_disc );
+
+CREATE TABLE dm_matriculas (
+    semestre NUMBER(6) NOT NULL
+);
+
+ALTER TABLE dm_matriculas ADD CONSTRAINT matriculas_pk2 PRIMARY KEY ( semestre );
+
+CREATE TABLE ft_fato (
+    mat_alu    NUMBER(10) NOT NULL,
+    semestre   NUMBER(6) NOT NULL,
+    cod_cursos NUMBER(4) NOT NULL,
+    cod_dpto   NUMBER(3) NOT NULL,
+    cod_disc   NUMBER(5) NOT NULL,
+    nota       NUMBER(5, 2) NOT NULL,
+    faltas     NUMBER(3) NOT NULL,
+    status     VARCHAR2(1) NOT NULL
+);
+
+ALTER TABLE ft_fato
+    ADD CONSTRAINT ft_fato_pk PRIMARY KEY ( mat_alu,
+                                            semestre,
+                                            cod_cursos,
+                                            cod_dpto,
+                                            cod_disc );
+
+ALTER TABLE ft_fato
+    ADD CONSTRAINT ft_fato_dm_alunos_fk FOREIGN KEY ( mat_alu )
+        REFERENCES dm_alunos ( mat_alu );
+
+ALTER TABLE ft_fato
+    ADD CONSTRAINT ft_fato_dm_cursos_fk FOREIGN KEY ( cod_cursos )
+        REFERENCES dm_cursos ( cod_curso );
+
+ALTER TABLE ft_fato
+    ADD CONSTRAINT ft_fato_dm_departamentos_fk FOREIGN KEY ( cod_dpto )
+        REFERENCES dm_departamentos ( cod_dpto );
+
+ALTER TABLE ft_fato
+    ADD CONSTRAINT ft_fato_dm_disciplinas_fk FOREIGN KEY ( cod_disc )
+        REFERENCES dm_disciplinas ( cod_disc );
+
+ALTER TABLE ft_fato
+    ADD CONSTRAINT ft_fato_dm_matriculas_fk FOREIGN KEY ( semestre )
+        REFERENCES dm_matriculas ( semestre );
+
+
+
+-- Relatório do Resumo do Oracle SQL Developer Data Modeler: 
+-- 
+-- CREATE TABLE                             6
+-- CREATE INDEX                             0
+-- ALTER TABLE                             11
+-- CREATE VIEW                              0
+-- ALTER VIEW                               0
+-- CREATE PACKAGE                           0
+-- CREATE PACKAGE BODY                      0
+-- CREATE PROCEDURE                         0
+-- CREATE FUNCTION                          0
+-- CREATE TRIGGER                           0
+-- ALTER TRIGGER                            0
+-- CREATE COLLECTION TYPE                   0
+-- CREATE STRUCTURED TYPE                   0
+-- CREATE STRUCTURED TYPE BODY              0
+-- CREATE CLUSTER                           0
+-- CREATE CONTEXT                           0
+-- CREATE DATABASE                          0
+-- CREATE DIMENSION                         0
+-- CREATE DIRECTORY                         0
+-- CREATE DISK GROUP                        0
+-- CREATE ROLE                              0
+-- CREATE ROLLBACK SEGMENT                  0
+-- CREATE SEQUENCE                          0
+-- CREATE MATERIALIZED VIEW                 0
+-- CREATE MATERIALIZED VIEW LOG             0
+-- CREATE SYNONYM                           0
+-- CREATE TABLESPACE                        0
+-- CREATE USER                              0
+-- 
+-- DROP TABLESPACE                          0
+-- DROP DATABASE                            0
+-- 
+-- REDACTION POLICY                         0
+-- 
+-- ORDS DROP SCHEMA                         0
+-- ORDS ENABLE SCHEMA                       0
+-- ORDS ENABLE OBJECT                       0
+-- 
+-- ERRORS                                   0
+-- WARNINGS                                 0

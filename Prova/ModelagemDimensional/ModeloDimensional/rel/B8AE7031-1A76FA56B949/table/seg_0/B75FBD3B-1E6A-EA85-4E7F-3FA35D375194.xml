@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B75FBD3B-1E6A-EA85-4E7F-3FA35D375194" name="DM_ALUNOS">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 18:30:51 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MAT_ALU" id="623C542F-D54B-D06A-0026-1BAAB87FEB00">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 18:30:51 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="190E3055-4DD5-EFDC-71D1-F968E6F6F30A">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 18:30:51 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DAT_ENTRADA" id="D20D8D44-B331-CD87-913A-AC2AC00CE1F4">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 18:30:51 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_CURSO" id="44EE0D5A-2313-AC78-71C2-70DAA7F25C9D">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 18:30:51 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COTISTA" id="4AC95D34-6694-DD8E-28AA-86B2071CFDEC">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 18:30:51 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D49E1661-DF22-342E-3F8D-26AE5D5E6F07" name="ALUNOS_PK2">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 18:30:51 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="623C542F-D54B-D06A-0026-1BAAB87FEB00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

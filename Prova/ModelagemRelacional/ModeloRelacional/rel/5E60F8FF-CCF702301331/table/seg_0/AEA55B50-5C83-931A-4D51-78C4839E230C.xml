@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AEA55B50-5C83-931A-4D51-78C4839E230C" name="DISCIPLINAS">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:57:18 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COD_DISC" id="E2102E5A-48BD-9BE9-6FFE-997B507B374F">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:58:08 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_DISC" id="A75F6208-BEEC-A05F-74E7-AA923F1BF6AD">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:58:08 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CARGA_HORARIA" id="A2B23212-CBF7-68A6-B4BF-621B40D7A6BF">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:58:08 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="43B839DC-863C-6794-91DF-7A427E9BD439" name="DISCIPLINAS_PK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:58:08 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2102E5A-48BD-9BE9-6FFE-997B507B374F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

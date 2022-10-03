@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="873DEEE5-2E02-96B9-DB91-B26E5F60FC95" containerWithKeyObject="AB0E1910-9A8F-B549-E88B-FE21D6339E30" localFKIndex="19667505-F37F-E777-33EC-D186E6D37A8F" name="FT_FATO_DM_MATRICULAS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-10-01 23:34:39 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<referredTableLongName>DM_MATRICULAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>34346FD5-B047-8BA5-19E9-C4F099CCE797</referredTableID>
+<keyObject>0C798465-9157-50D6-25B1-04B5C143E4A7</keyObject>
+<referredKeyID>0C798465-9157-50D6-25B1-04B5C143E4A7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>SEMESTRE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

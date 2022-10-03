@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DC1676EB-CAD4-19DF-9E1F-1C314DCCDFE6" name="DEPARTAMENTOS">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:54:02 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COD_DPTO" id="FAE792D5-0686-3F5F-B9AB-8A802AC6501C">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:55:06 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_DPTO" id="DEF3699C-4349-D582-59F9-171DEEF136CB">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:55:06 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1F19CA5A-5B23-57C2-158D-F93A66146C23" name="DEPARTAMENTOS_PK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:55:06 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FAE792D5-0686-3F5F-B9AB-8A802AC6501C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

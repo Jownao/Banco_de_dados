@@ -1,3 +1,5 @@
+## VERSÃO ANTIGA DA CARGA
+
 # importando o módulo
 import cx_Oracle
 import pandas as pd
@@ -38,27 +40,26 @@ def carga():
             result = sql.fetchall()
             for i in result:
                 print(i)
-            #print(result)
         elif comando == '3':
             deleteDimensaoFato()
             # Carga DM_ALUNOS
-
             df = pd.read_sql('''SELECT MAT_ALU, NOME, TO_CHAR(DAT_ENTRADA) AS DAT_ENTRADA, COD_CURSO,COTISTA  FROM alunos''',conn)
             # Loop de inserção
-            deleteDimensaoALunos()
+            deleteDimensaoAlunos()
             for i, mat_alu in enumerate(df['MAT_ALU']):
                 nome = df.loc[i,'NOME']
                 dat_entrada = df.loc[i,'DAT_ENTRADA']
                 cod_curso = df.loc[i,'COD_CURSO']
                 cotista = df.loc[i,'COTISTA']
-                
+                    
                 script = 'INSERT INTO DM_ALUNOS (MAT_ALU,NOME,DAT_ENTRADA,COD_CURSO,COTISTA) VALUES ('''
 
                 dat_entrada = str(dat_entrada).replace('[','').replace(']','')
 
                 dados = str(mat_alu) + ',' + '\'' + nome + '\',' + '\'' + dat_entrada + '\',' + str(cod_curso) + ',' + '\'' + cotista + '\'' + ')'
-                
+                        
                 query = script + dados
+                #print(query)
                 sql.execute(query)
                 
             print('Carga DM_ALUNOS concluída com sucesso!')

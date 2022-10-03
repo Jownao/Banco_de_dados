@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB59DE60-8D6F-AF39-567C-C951F43FBBE4" name="MATRIZES_CURSOS">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:58:11 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COD_CURSO" id="16767877-7281-A22B-A1F2-90194845162B">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:59:16 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="58B559F1-243C-49D5-C186-6B423A5CB7FD" referredColumn="B434F978-8202-088A-F5C8-2555C9B2C13C"/>
+</associations>
+</Column>
+<Column name="COD_DISC" id="1E9499E0-4624-BCB1-AFB7-859EC7E73FFD">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:59:16 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7BA723B8-5C0C-B09A-9111-E2811E52014E" referredColumn="E2102E5A-48BD-9BE9-6FFE-997B507B374F"/>
+</associations>
+</Column>
+<Column name="PERIODO" id="7955E6F6-339C-F25C-0503-01A0D87B87E2">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:59:16 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E0E2E542-AF03-BEDE-05DD-DC42C03AE281" name="MATRIZES_CURSOS_PK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:59:30 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16767877-7281-A22B-A1F2-90194845162B"/>
+<colUsage columnID="1E9499E0-4624-BCB1-AFB7-859EC7E73FFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="85F2B613-0E4A-C110-53C5-9B9A09118701" name="MATRIZES_CURSOS_CURSOS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 23:04:11 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16767877-7281-A22B-A1F2-90194845162B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B55E3344-945F-77F9-F2CA-B83235363EC1" name="MATRIZES_CURSOS_DISCIPLINAS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 23:04:23 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E9499E0-4624-BCB1-AFB7-859EC7E73FFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

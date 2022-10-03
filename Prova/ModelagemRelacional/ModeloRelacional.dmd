@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Modelagem Trabalho" id="44F9312E-50F3-C3F5-82BF-9B95DB46A1CB" version="3.5">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:45:43 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>44F9312E-50F3-C3F5-82BF-9B95DB46A1CB</designId>
+</OSDM_Design>

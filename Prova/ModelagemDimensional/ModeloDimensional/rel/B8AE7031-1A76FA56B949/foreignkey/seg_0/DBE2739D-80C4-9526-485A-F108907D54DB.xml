@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DBE2739D-80C4-9526-485A-F108907D54DB" containerWithKeyObject="AB0E1910-9A8F-B549-E88B-FE21D6339E30" localFKIndex="11ECC56D-4AEA-FC98-46F0-0625E535A142" name="FT_FATO_DM_DISCIPLINAS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:23:58 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<referredTableLongName>DM_DISCIPLINAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6D13F68B-420A-75B7-BDAB-0F0BFD8B7EAD</referredTableID>
+<keyObject>3E9D9B51-8FBA-0131-0A88-5704BDD2F062</keyObject>
+<referredKeyID>3E9D9B51-8FBA-0131-0A88-5704BDD2F062</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COD_DISC</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

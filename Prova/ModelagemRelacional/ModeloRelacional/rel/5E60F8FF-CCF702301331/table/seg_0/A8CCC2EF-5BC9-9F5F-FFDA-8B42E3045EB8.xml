@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A8CCC2EF-5BC9-9F5F-FFDA-8B42E3045EB8" name="MATRICULAS">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:55:11 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SEMESTRE" id="CBC99E2B-1439-73EC-20CA-C92283F67D52">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:57:13 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAT_ALU" id="A1A6BB4A-A1C8-58EC-C07F-C563502B713D">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:57:13 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B1D72352-76C4-DEA7-8507-D85AC9E35C01" referredColumn="D101ABEA-F569-6E15-D0D0-CB4BC89F1E37"/>
+</associations>
+</Column>
+<Column name="COD_DISC" id="98A16EE3-801A-5364-90C1-B972C63639DB">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 23:09:12 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="80DDA097-DA17-92AB-EB8F-990246935D05" referredColumn="E2102E5A-48BD-9BE9-6FFE-997B507B374F"/>
+</associations>
+</Column>
+<Column name="NOTA" id="85B52037-8262-5478-298F-78C59FC7131B">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:57:13 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FALTAS" id="E96EA2E7-0A0D-3FC6-B497-030807892B3B">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:57:13 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS" id="EA825C36-AC63-7F95-E53C-DECEFC156141">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:57:13 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2FA59312-CEA1-462E-F3DE-CC079E402AA8" name="MATRICULAS_PK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 22:57:13 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBC99E2B-1439-73EC-20CA-C92283F67D52"/>
+<colUsage columnID="A1A6BB4A-A1C8-58EC-C07F-C563502B713D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5E6707C-39CA-9084-682F-B27A54EB6B0E" name="MATRICULAS_ALUNOS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 23:05:22 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A1A6BB4A-A1C8-58EC-C07F-C563502B713D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F04D5A54-835B-BAB0-4BC8-7A67F6C5B3CF" name="MATRICULAS_DISCIPLINAS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 23:09:23 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98A16EE3-801A-5364-90C1-B972C63639DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

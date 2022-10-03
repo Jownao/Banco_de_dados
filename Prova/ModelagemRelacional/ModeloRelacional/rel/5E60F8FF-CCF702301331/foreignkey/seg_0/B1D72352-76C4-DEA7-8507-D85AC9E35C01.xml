@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B1D72352-76C4-DEA7-8507-D85AC9E35C01" containerWithKeyObject="A8CCC2EF-5BC9-9F5F-FFDA-8B42E3045EB8" localFKIndex="C5E6707C-39CA-9084-682F-B27A54EB6B0E" name="MATRICULAS_ALUNOS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 23:05:22 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<referredTableLongName>ALUNOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4F29D262-E25F-5C2B-BD6C-5184A1B8A440</referredTableID>
+<keyObject>219EA805-26BA-87F1-864C-929F391D3E8B</keyObject>
+<referredKeyID>219EA805-26BA-87F1-864C-929F391D3E8B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MAT_ALU</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

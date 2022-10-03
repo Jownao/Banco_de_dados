@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="34346FD5-B047-8BA5-19E9-C4F099CCE797" name="DM_MATRICULAS">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 18:31:15 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SEMESTRE" id="59AA80FC-3B61-B1A4-0D8F-E278D267C1B0">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 18:31:15 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C798465-9157-50D6-25B1-04B5C143E4A7" name="MATRICULAS_PK2">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 18:31:15 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59AA80FC-3B61-B1A4-0D8F-E278D267C1B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

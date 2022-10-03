@@ -1,0 +1,183 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB0E1910-9A8F-B549-E88B-FE21D6339E30" name="FT_FATO">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:17:21 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<ordsAlias>table_14</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MAT_ALU" id="1CD5D250-7E40-DBE9-D3E3-79926C20803D">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:22:47 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D347B58-9599-5F40-8CE1-04564772E13B" referredColumn="623C542F-D54B-D06A-0026-1BAAB87FEB00"/>
+</associations>
+</Column>
+<Column name="SEMESTRE" id="BFF47619-FE24-9D6E-1A3A-F41657617604">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:22:47 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="873DEEE5-2E02-96B9-DB91-B26E5F60FC95" referredColumn="59AA80FC-3B61-B1A4-0D8F-E278D267C1B0"/>
+</associations>
+</Column>
+<Column name="COD_CURSOS" id="3196429D-6862-4939-F349-81577FADF4FE">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:22:47 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E53DE842-CDAB-7D8E-1A4C-5A3B7A1B74E4" referredColumn="17C61229-8616-DC79-C0E3-59E92899103F"/>
+</associations>
+</Column>
+<Column name="COD_DPTO" id="2BBC69F7-163A-C383-96D5-C7AACBA55629">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:22:47 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1D6610F4-1769-7F7F-4B65-20E3CF5BC663" referredColumn="FFEBF945-609B-CB53-0B8B-6792650FD325"/>
+</associations>
+</Column>
+<Column name="COD_DISC" id="9C2101A8-D776-D1BC-25EA-1A2E3B653B6A">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:22:47 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DBE2739D-80C4-9526-485A-F108907D54DB" referredColumn="0D5438B4-A231-EC89-6653-44DDE56D7C7A"/>
+</associations>
+</Column>
+<Column name="NOTA" id="E8D323B3-6D64-4319-3B04-2A835CB26126">
+<createdBy>eduar</createdBy>
+<createdTime>2022-10-02 02:32:40 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FALTAS" id="18018B4D-D2CC-849C-2160-9A309236A99C">
+<createdBy>eduar</createdBy>
+<createdTime>2022-10-02 02:32:40 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS" id="6B86E398-1E4A-7614-FD84-0B4A110B38FA">
+<createdBy>eduar</createdBy>
+<createdTime>2022-10-02 02:32:40 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7B006020-273A-44CE-461F-9D8C5239E7A5" name="FT_FATO_PK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:22:47 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CD5D250-7E40-DBE9-D3E3-79926C20803D"/>
+<colUsage columnID="BFF47619-FE24-9D6E-1A3A-F41657617604"/>
+<colUsage columnID="3196429D-6862-4939-F349-81577FADF4FE"/>
+<colUsage columnID="2BBC69F7-163A-C383-96D5-C7AACBA55629"/>
+<colUsage columnID="9C2101A8-D776-D1BC-25EA-1A2E3B653B6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AD152B7F-8C24-6065-8F57-FF71C49C3472" name="FT_FATO_DM_ALUNOS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:23:58 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CD5D250-7E40-DBE9-D3E3-79926C20803D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7B9BC870-92F9-50A8-AA20-FB5DDE30C658" name="FT_FATO_DM_CURSOS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:23:58 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3196429D-6862-4939-F349-81577FADF4FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AC44AD55-132F-2622-D6C1-EA01110EA681" name="FT_FATO_DM_DEPARTAMENTOS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:23:58 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2BBC69F7-163A-C383-96D5-C7AACBA55629"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="11ECC56D-4AEA-FC98-46F0-0625E535A142" name="FT_FATO_DM_DISCIPLINAS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-30 19:23:58 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9C2101A8-D776-D1BC-25EA-1A2E3B653B6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="19667505-F37F-E777-33EC-D186E6D37A8F" name="FT_FATO_DM_MATRICULAS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-10-01 23:34:39 UTC</createdTime>
+<ownerDesignName>ModeloDimensional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BFF47619-FE24-9D6E-1A3A-F41657617604"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

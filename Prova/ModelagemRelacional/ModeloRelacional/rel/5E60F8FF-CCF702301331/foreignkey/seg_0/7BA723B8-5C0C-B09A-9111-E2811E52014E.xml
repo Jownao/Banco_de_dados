@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7BA723B8-5C0C-B09A-9111-E2811E52014E" containerWithKeyObject="AB59DE60-8D6F-AF39-567C-C951F43FBBE4" localFKIndex="B55E3344-945F-77F9-F2CA-B83235363EC1" name="MATRIZES_CURSOS_DISCIPLINAS_FK">
+<createdBy>eduar</createdBy>
+<createdTime>2022-09-29 23:04:23 UTC</createdTime>
+<ownerDesignName>Modelagem Trabalho</ownerDesignName>
+<referredTableLongName>DISCIPLINAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AEA55B50-5C83-931A-4D51-78C4839E230C</referredTableID>
+<keyObject>43B839DC-863C-6794-91DF-7A427E9BD439</keyObject>
+<referredKeyID>43B839DC-863C-6794-91DF-7A427E9BD439</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COD_DISC</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

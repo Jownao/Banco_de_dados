@@ -1,7 +1,7 @@
 import cx_Oracle
 
 # Deletar dimensão alunos
-def deleteDimensaoALunos():
+def deleteDimensaoAlunos():
     try:
         conn = cx_Oracle.connect(
         user = 'admin',
